@@ -1,12 +1,15 @@
-"""This program counts the number of vowels in a string."""
+def count_vowels(string: str) -> int:
+    vowels = "aeiouAEIOU"  # Lista de vogais
+    count = 0
 
-def count_vowels(string:str) -> int:
-    """
-    Takes in a string and returns the number of vowels in the string.
+    for char in string:
+        if char in vowels:
+            count += 1
 
-    Args:
-        string (str): The string to count vowels in.
-
-    Returns:
-        int: The number of vowels in the string.
-    """
+    return count
+    
+print(count_vowels("xyz"))       # Saída: 0
+print(count_vowels("aeiou"))     # Saída: 5
+print(count_vowels("AbCdeFG"))   # Saída: 3
+print(count_vowels("hello123"))  # Saída: 2
+print(count_vowels("hello!@#"))  # Saída: 2
